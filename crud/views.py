@@ -20,7 +20,7 @@ class PessoaCreate(CreateView):
             form.add_error('cpf', 'CPF já cadastrado.')
             return self.form_invalid(form)
         return super().form_valid(form)
-
+    
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['botao_submit'] = 'Cadastrar'

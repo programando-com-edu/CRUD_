@@ -1,7 +1,7 @@
 {% extends 'base.html'%}
 
 {% block conteudo%}
-<form action="{% url 'pessoa_create' %}" method="post">
+<form action="{% url 'pessoa_create' %}" method="post" enctype="multipart/form-data">
   {% csrf_token %}
   <div style='text-align: center;' class="container">
       <h1>Cadastro de Usuários</h1>

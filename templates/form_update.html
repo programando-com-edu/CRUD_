@@ -1,9 +1,9 @@
 {% extends 'base.html'%}
 
 {% block conteudo%}
-<form href="/update/{{Usuario.id}}" method="post">
+<form href="/update/{{Usuario.id}}" method="post" enctype="multipart/form-data">
   {% csrf_token %}
-  <div style='text-align: center;' class="container">
+  <div style='text-align: center;' class="container ">
       <h1>Cadastro de Usuários</h1>
         {{ form.as_p }}
       <button class="form-control-sm">Enviar</button>
