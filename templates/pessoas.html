@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block conteudo%}
-
+<div style='text-align: center;'>
+    <h1>Usuários</h1>
+</div>
 <div class="container">
     <table  class="table table-bordered table-striped">
         <tr>
@@ -14,7 +16,7 @@
         </tr>
         {% for Usuario in object_list %}
         <tr>
-            <td><img src="media/{{Usuario.foto_perfil}}" height="150" width="150"></td>
+            <td><img src="media/{{Usuario.foto_perfil}}" height="110" width="110"></td>
             <td>{{Usuario.nome}}</td>
             <td>{{Usuario.data_nasc}}</td>
             <td>{{Usuario.cpf}}</td>
