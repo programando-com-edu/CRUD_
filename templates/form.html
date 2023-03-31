@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block conteudo%}
+<form action="{% url 'pessoa_create' %}" method="post">
+  {% csrf_token %}
+  <div style='text-align: center;' class="container">
+      <h1>Cadastro de Usuários</h1>
+        {{ form.as_p }}
+      <button class="form-control-sm">Enviar</button>
+  </div>
+</form>
+{% endblock %}

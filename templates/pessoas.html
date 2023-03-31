@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block conteudo%}
+
+<div class="container">
+    <table  class="table table-bordered table-striped">
+        <tr>
+            <th>foto</th>
+            <th>nome</th>
+            <th>data de nascimento</th>
+            <th>cpf</th>
+            <th>email</th>
+            <th>ações</th>
+
+        </tr>
+        {% for Usuario in object_list %}
+        <tr>
+            <td>{{Usuario.foto}}</td>
+            <td>{{Usuario.nome}}</td>
+            <td>{{Usuario.data_nasc}}</td>
+            <td>{{Usuario.cpf}}</td>
+            <td>{{Usuario.email}}</td>
+            <td>
+                <a href="/update/{{Usuario.id}}" type="button" class="btn btn-primary">Editar</a>
+                <a href="/delete/{{Usuario.id}}"type="button" class="btn btn-danger btnDel">Deletar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock%}
